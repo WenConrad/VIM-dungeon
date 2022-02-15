@@ -13,7 +13,8 @@ export const Row = (props) => {
   const rowCells = [];
 
   for (let i = 0; i < 20; i++) {
-    rowCells.push(<Cell key={i} id={String.fromCharCode(65 + i)+props.id} />)
+    let cellData = (props.rowData && props.rowData[i]) ? props.rowData[i] : null;
+    rowCells.push(<Cell key={i} id={String.fromCharCode(65 + i)+props.id} cellData={cellData} />)
   }
 
   return (

@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { Grid } from "./components/Grid";
 
-const gameStage = {
+const stageData = {
   1: "WELCOME",
   2: "TO",
   3: "VIM-DUNGEON",
@@ -14,7 +14,7 @@ function App() {
       <header className="App-header">
         <div>VIM Dungeon</div>
       </header>
-      <Grid gameStage={gameStage} />
+      <Grid stageData={stageData} />
     </div>
   );
 }
