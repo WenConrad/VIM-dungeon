@@ -2,21 +2,21 @@ import React from "react";
 import styled from "styled-components";
 
   const CellWrapper = styled.div`
-    width: 1em;
-    height: 1.2em;
+    margin: 0px;
+    width: 64px;
+    height: 64px;
     text-align: center;
-    padding: 0.1em;
-    margin: 0.03em;
-    border-radius: 10%;
+    padding: 0px;
     background-color: grey;
     color: white;
+    box-shadow: inset 0 0 3px black;
   `;
 
 export const Cell = (props) => {
 
   return (
     <CellWrapper>
-      {props.cell}
+      {props.id}
     </CellWrapper>
   )
 }

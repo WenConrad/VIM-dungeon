@@ -2,13 +2,11 @@ import "./App.css";
 import React from "react";
 import { Grid } from "./components/Grid";
 
-const gameStage = [
-  ["1", "2", "3", "4", "5", "6", "7", "8"],
-  ["1", "2", "3", "4", "5", "6", "7", "8"],
-  ["1", "2", "3", "4", "5", "6", "7", "8"],
-  ["1", "2", "3", "4", "5", "6", "7", "8"],
-  ["1", "2", "3", "4", "5", "6", "7", "8"],
-];
+const gameStage = {
+  1: "WELCOME",
+  2: "TO",
+  3: "VIM-DUNGEON",
+};
 
 function App() {
   return (

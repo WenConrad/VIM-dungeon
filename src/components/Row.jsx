@@ -3,15 +3,22 @@ import styled from "styled-components";
 import { Cell } from "./Cell";
 
 const RowWrapper = styled.div`
-  display: flex;
-  flex-direction: inline;
-  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: 21;
+  display: contents;
+  margin: 0;
 `;
 
 export const Row = (props) => {
+  const rowCells = [];
+
+  for (let i = 0; i < 20; i++) {
+    rowCells.push(<Cell key={i} id={String.fromCharCode(65 + i)+props.id} />)
+  }
+
   return (
     <RowWrapper>
-      {props.data.map((cell, index) => <Cell key={index} cell={cell} />)}
+      {rowCells}
     </RowWrapper>
   )
 }
