@@ -11,6 +11,7 @@ const CellWrapper = styled.div`
   background-color: grey;
   color: white;
   box-shadow: ${props => (props.inside) ? "inset 0 0 5px 5px dimgrey" : "inset 0 0 2px 1px dimgrey"};
+  font-size: ${props => (props.inside) ? "45px" : "48px"};
 `;
 
 export const Cell = (props) => {

@@ -3,9 +3,8 @@ import React, { useState, useCallback } from "react";
 import { Grid } from "./components/Grid";
 
 const stageData = {
-  1: "WELCOME",
-  2: "TO",
-  3: "VIM-DUNGEON",
+  1: "WELCOME TO",
+  2: "VIM-DUNGEON",
 };
 
 function App() {
@@ -20,6 +19,9 @@ function App() {
 
   const handleKeyDown = useCallback(
     (e) => {
+      if (!movement[e.key]) {
+        return;
+      }
       let move = movement[e.key];
       setCursor((prev) => [
         prev[0] + move[0] >= 1 && prev[0] + move[0] <= 20
