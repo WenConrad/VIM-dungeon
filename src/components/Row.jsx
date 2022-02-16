@@ -11,10 +11,12 @@ const RowWrapper = styled.div`
 
 export const Row = (props) => {
   const rowCells = [];
+  let { cursor } = props;
 
   for (let i = 0; i < 20; i++) {
     let cellData = (props.rowData && props.rowData[i]) ? props.rowData[i] : null;
-    rowCells.push(<Cell key={i} id={String.fromCharCode(65 + i)+props.id} cellData={cellData} />)
+    let cursorPosition = cursor && cursor[0] === i + 1 ? cursor : null;
+    rowCells.push(<Cell key={i} id={String.fromCharCode(65 + i)+props.id} cellData={cellData} cursor={cursorPosition} />)
   }
 
   return (

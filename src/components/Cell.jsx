@@ -10,13 +10,13 @@ const CellWrapper = styled.div`
   padding: 0px;
   background-color: grey;
   color: white;
-  box-shadow: inset 0 0 2px 1px dimgrey;
+  box-shadow: ${props => (props.inside) ? "inset 0 0 5px 5px dimgrey" : "inset 0 0 2px 1px dimgrey"};
 `;
 
 export const Cell = (props) => {
 
   return (
-    <CellWrapper>
+    <CellWrapper inside={props.cursor}>
       {props.cellData}
     </CellWrapper>
   )
